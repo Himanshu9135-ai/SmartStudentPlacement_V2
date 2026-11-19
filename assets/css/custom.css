@@ -1,0 +1,243 @@
+﻿/* ==========================================================
+   Smart Student Management & Placement Portal - Theme Styles
+   ========================================================== */
+
+:root {
+    --primary-color: #1e3c72;
+    --primary-dark: #152b52;
+    --secondary-color: #2a5298;
+    --accent-color: #f39c12;
+    --sidebar-width: 260px;
+    --topbar-height: 60px;
+    --bg-light: #f4f6f9;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar */
+.navbar-custom {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+/* Dashboard Wrapper Layout */
+.dashboard-container {
+    display: flex;
+    flex: 1;
+    min-height: calc(100vh - var(--topbar-height));
+}
+
+/* Sidebar */
+.portal-sidebar {
+    width: var(--sidebar-width);
+    background: #ffffff;
+    border-right: 1px solid #e2e8f0;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.sidebar-profile {
+    padding-bottom: 1.2rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.sidebar-profile .avatar-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto 0.75rem;
+    box-shadow: 0 4px 8px rgba(30, 60, 114, 0.25);
+}
+
+.portal-nav .nav-link {
+    color: #556987;
+    font-weight: 500;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.portal-nav .nav-link i {
+    font-size: 1.15rem;
+    margin-right: 0.75rem;
+    width: 24px;
+    text-align: center;
+}
+
+.portal-nav .nav-link:hover {
+    color: var(--primary-color);
+    background: rgba(30, 60, 114, 0.08);
+}
+
+.portal-nav .nav-link.active {
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    box-shadow: 0 4px 10px rgba(30, 60, 114, 0.25);
+}
+
+/* Main Content Area */
+.portal-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+}
+
+/* Stat Cards */
+.stat-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.stat-card .stat-icon {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    font-size: 3.5rem;
+    opacity: 0.15;
+}
+
+.stat-card .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.stat-card .stat-label {
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+}
+
+/* Cards & Tables */
+.card-portal {
+    border: none;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    background: #ffffff;
+    margin-bottom: 1.5rem;
+}
+
+.card-portal .card-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #edf2f7;
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    border-radius: 12px 12px 0 0 !important;
+}
+
+.table-portal th {
+    font-weight: 600;
+    color: #4a5568;
+    background-color: #f8fafc;
+    border-top: none;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+    letter-spacing: 0.5px;
+}
+
+/* Eligibility Badges */
+.badge-eligible {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.badge-ineligible {
+    background-color: #f8d7da;
+    color: #842029;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+/* Public Landing Page Styles */
+.hero-section {
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.95) 0%, rgba(42, 82, 152, 0.95) 100%), url('../images/college-bg.jpg') center/cover;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: all 0.3s;
+    height: 100%;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.feature-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: rgba(30, 60, 114, 0.1);
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    .portal-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+    .portal-content {
+        padding: 1rem;
+    }
+}
